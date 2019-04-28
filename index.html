@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+    
+        .div_card{
+            background-color: blueviolet;
+            width: 300px;
+            height: 150px;
+            margin-left: 150px;
+            
+        }
+
+        img{
+            margin-top: 15px;
+            margin-left: 40px;
+            width: 200px;
+            height: 200px;
+        }
+    
+    </style>
+
+
+
+
+    <script>
+var margin = 0;
+
+        function enter_event() 
+        {
+            margin = (parseInt(margin) + 53);
+            var input = document.getElementById("input_links_pic").value;
+
+            document.getElementById("links_div").innerHTML += "<div style='margin-top: "+margin+"px'><a  href='"+input+"' class='img_car'><div class='div_card'><li><img src='"+input+"' /><li></div></a></div>";
+
+            document.getElementById("input_links_pic").value = "";
+
+            
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <label > ссылка на добавление 
+    
+    <input type="search" id="input_links_pic" onchange="enter_event()">
+    
+    </label>
+
+    <div> 
+       <ul id="links_div">
+
+        </ul>
+    </div>
+</body>
+</html>
